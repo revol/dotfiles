@@ -1,6 +1,3 @@
-#########
-# rCustom
- 
 # extract
 function extract () {
   for i in "$@" ; do
@@ -65,12 +62,21 @@ function mcd() {
 function tf() { 
 tail -f $2 $3 $4 $5 | perl -pe "s/$1/\e[1;31;43m$&\e[0m/g"
 }
- 
+
+# tail follow shortcut 
 function t() {
 tail -f $@
 }
+
+# get rid of command not found
+alias cd..='cd ..'
  
-# find text in any file
-function ft() {
-find . -name "$2" -exec grep -il "$1" {} \;
-}
+# a quick way to get out of current directory
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
+alias .7='cd ../../../../../../../'
+alias .8='cd ../../../../../../../../'
