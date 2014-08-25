@@ -1,3 +1,8 @@
+# always vim
+alias vi='vim'
+export EDITOR='vim'
+export VISUAL='vim'
+
 # extract
 function extract () {
   for i in "$@" ; do
